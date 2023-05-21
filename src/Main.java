@@ -1,4 +1,3 @@
-
 /*
 public class Main - робота при запуску з аргументами
 для CLI викликається new Runner(fileName, code);

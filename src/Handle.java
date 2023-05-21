@@ -12,7 +12,6 @@ bruteForce викликається конструктором класу при
 public static int codeByBruteForce зберігае значення кода знайденого BruteForce
  */
 
-
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;

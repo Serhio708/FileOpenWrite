@@ -2,7 +2,6 @@
 public class FileOpen
 public List<String> getLines()- відкриває вказаний файл та формує список з його рядків
  */
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -15,7 +14,7 @@ public class FileOpen {
         this.path = path;
     }
     public  List<String> getLines() throws IOException {
-        List<String> list = Files.readAllLines(path, UTF_8);
-    return  list;
+
+    return  Files.readAllLines(path, UTF_8);
     }
 }

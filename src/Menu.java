@@ -11,7 +11,6 @@ public void sayHello() виводить початкове привітання
 
 public void sayBye() виводить текстове завершення
  */
-
 public class Menu {
     public static final String leftBorder = "║   ";
     public static final String rightBorder = "    ║\n";

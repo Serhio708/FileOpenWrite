@@ -8,4 +8,5 @@ public class SetColor {
     public static final String darkBlue ="[34m";
     public static final String Magenta ="[35m";
     public static final String lightBlue ="[36m";
+
 }

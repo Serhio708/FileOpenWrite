@@ -10,8 +10,6 @@ public boolean isUkrainian(char character) - перевіряє належніс
 public class Letter {
     public static final String abcEnglish ="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.,?!-:' ";
     public static final String abcUkrainian ="абвгґдеєжзиіїйклмнопрстуфхцчшщьюяАБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ";
-    public boolean isEnglish(char character){
-        return abcEnglish.indexOf(character) >= 0;
-    }
+    public boolean isEnglish(char character){return abcEnglish.indexOf(character) >= 0;}
     public boolean isUkrainian(char character){ return abcUkrainian.indexOf(character) >= 0;}
 }

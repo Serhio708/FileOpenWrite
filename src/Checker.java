@@ -7,7 +7,6 @@ public boolean encryptedFileExist - чи є зашифрований файл?
 public void fileExist(String FileName) чи є первинний файл?
                         mode 0 - з виходом, для роботи з аргументами
                         mode 1 - з попередженням, для роботи з CLI
-
 public String makeFileName(String SourcePathName,String Suffix) формує ім'я файлу
 
 public int getCode(String line) - чи є code числом?

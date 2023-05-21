@@ -7,8 +7,6 @@ private char getNewCharacter(String alphabet, char symbol) -
 
 public String cipher(String message) будує рядок з символів які передає метод getNewCharacter
  */
-
-
 public class CaesarCipher{
     public int code;
     public CaesarCipher(int code)

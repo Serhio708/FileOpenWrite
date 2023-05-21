@@ -5,7 +5,6 @@ public class Runner - CLI для взаємодії з користувачем
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Scanner;
-
 public class Runner {
     String fileName;
     int code;

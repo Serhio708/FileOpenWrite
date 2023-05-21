@@ -1,6 +1,6 @@
 /*
 public class DoIt обробка пункта меню при виборі
-взаємодія об'єктів fileopen та handle
+взаємодія об'єктів FileOpen та handle
  */
 import java.io.IOException;
 import java.nio.file.Path;
