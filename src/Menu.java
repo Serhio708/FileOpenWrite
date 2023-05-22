@@ -12,10 +12,10 @@ public void sayHello() виводить початкове привітання
 public void sayBye() виводить текстове завершення
  */
 public class Menu {
-    public static final String leftBorder = "║   ";
-    public static final String rightBorder = "    ║\n";
-    public static final String underLine = "╚══════════════════════════╝\n";
-    public static final String upperLine = "\n╔══════════════════════════╗\n";
+    public static final String leftBorder = "*   ";
+    public static final String rightBorder = "    *\n";
+    public static final String underLine = "****************************\n";
+    public static final String upperLine = "\n****************************\n";
     public void printColorLine(String color, String line){
         System.out.print((char)27 + color + line + (char)27 + "[0m");
     }
