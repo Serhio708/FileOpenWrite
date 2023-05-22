@@ -35,33 +35,33 @@ public class Runner {
             if (scanner.hasNextInt()) {
                 choice = scanner.nextInt();
             } else {
-                menu.printColorLine(SetColor.Red, "Enter number from 1 to 4\n");
+                menu.printColorLine("Enter number from 1 to 4\n");
                 continue;
             }
             switch (choice) {
                 case 1 -> {
-                    doIt.caseHandle(SetColor.Yellow, pathIn, pathOut, code);
-                    menu.printColorLine(SetColor.darkBlue, "--> File was encrypted! Scroll up to see it!\n");
+                    doIt.caseHandle(pathIn, pathOut, code);
+                    menu.printColorLine("--> File was encrypted! Scroll up to see it!\n");
                 }
                 case 2 -> {
                     if (checker.encryptedFileExist(pathOut.toString(), 1)) {
-                        doIt.caseHandle(SetColor.Green, pathOut, pathDec, code * (-1));
-                        menu.printColorLine(SetColor.darkBlue, "--> File was decrypted! Scroll up to see it!\n");
+                        doIt.caseHandle(pathOut, pathDec, code * (-1));
+                        menu.printColorLine("--> File was decrypted! Scroll up to see it!\n");
                     }
                 }
                 case 3 -> {
                     if (checker.encryptedFileExist(pathOut.toString(),1)) {
-                        doIt.caseHandle(SetColor.Magenta, pathOut, pathDec, 0);
-                        menu.printColorLine(SetColor.darkBlue, "--> Code was found by brute force! Code is --> " + Handle.codeByBruteForce * (-1) + "\n");
-                        menu.printColorLine(SetColor.darkBlue, "--> File was decrypted with brute force! Scroll up to see it!\n");
+                        doIt.caseHandle(pathOut, pathDec, 0);
+                        menu.printColorLine("--> Code was found by brute force! Code is --> " + Handle.codeByBruteForce * (-1) + "\n");
+                        menu.printColorLine("--> File was decrypted with brute force! Scroll up to see it!\n");
                     }
                 }
                 case 4 -> {
-                    menu.printColorLine(SetColor.darkBlue, " Thank you for your time!\n");
+                    menu.printColorLine(" Thank you for your time!\n");
                     menu.sayBye();
                     goOn = false;
                 }
-                default -> menu.printColorLine(SetColor.Red, "Enter number from 1 to 4\n");
+                default -> menu.printColorLine("Enter number from 1 to 4\n");
             }
         }
     }

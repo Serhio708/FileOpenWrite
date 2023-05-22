@@ -36,7 +36,6 @@ public class Handle {
             this.code =  bruteForce()*(-1);
             codeByBruteForce = this.code;
         }
-
     }
     public List<String> getHandledLines() {
         CaesarCipher cipher = new CaesarCipher(code);

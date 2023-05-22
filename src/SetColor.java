@@ -1,6 +1,8 @@
 /*
 public class SetColor набір констант для задання кольору тексту
  */
+// не працюе в консолі
+/*
 public class SetColor {
     public static final String Red ="[31m";
     public static final String Green ="[32m";
@@ -9,4 +11,4 @@ public class SetColor {
     public static final String Magenta ="[35m";
     public static final String lightBlue ="[36m";
 
-}
+} */

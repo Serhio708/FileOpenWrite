@@ -19,14 +19,14 @@ public class Checker {
         Menu menu = new Menu();
 
         if (fileEncrypted.exists() && !fileEncrypted.isDirectory()) {
-            menu.printColorLine(SetColor.darkBlue, "--> Encrypted file exists!\n");
+            menu.printColorLine("--> Encrypted file exists!\n");
         } else {
-            menu.printColorLine(SetColor.Red, "--> Please ENCRYPT source file before using DECRYPT or BRUTE_FORCE mode\n");
+            menu.printColorLine("--> Please ENCRYPT source file before using DECRYPT or BRUTE_FORCE mode\n");
             if (mode == 0) {
                 menu.sayBye();
                 System.exit(0);
             } else {
-                menu.printColorLine(SetColor.Red, "--> Use mode 1 first\n");
+                menu.printColorLine("--> Use mode 1 first\n");
                 return false;
             }
         }
@@ -37,10 +37,10 @@ public class Checker {
         File file = new File(FileName);
 
         if (file.exists() && !file.isDirectory()) {
-            menu.printColorLine(SetColor.darkBlue,"--> Source file exists!\n");
+            menu.printColorLine("--> Source file exists!\n");
         }
         else {
-            menu.printColorLine(SetColor.Red,"File doesn't exist or program doesn't have access to the file\n");
+            menu.printColorLine("File doesn't exist or program doesn't have access to the file\n");
             menu.sayBye();
             System.exit(0);
         }
@@ -66,10 +66,13 @@ public class Checker {
         try {
             code = Integer.parseInt(line.trim());
         } catch (NumberFormatException nfe) {
-            menu.printColorLine(SetColor.Red, "NumberFormatException: " + nfe.getMessage());
-            menu.printColorLine(SetColor.Red, "\n--> Enter integer number for code!");
+            menu.printColorLine("NumberFormatException: " + nfe.getMessage());
+            menu.printColorLine("\n--> Enter integer number for code!");
             menu.sayBye();
             System.exit(0);
+        }
+        if (code < 0) {
+            code *= (-1);
         }
         return code;
     }
