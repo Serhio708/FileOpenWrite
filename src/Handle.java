@@ -57,19 +57,28 @@ public class Handle {
     }
      public int bruteForce(){
 
-        for (int tryCode=1; tryCode< Letter.abcEnglish.length() / 2; tryCode++ ) {
+        for (int tryCode=1; tryCode< Letter.abcEnglish.length(); tryCode++ ) {
             CaesarCipher cipher = new CaesarCipher(tryCode * (-1));
+            int counter = 0;
             for (String codedLine : list) {
                 String decodedLine = cipher.cipher(codedLine);
                 boolean inComma = decodedLine.contains(", ");
                 boolean endComma = decodedLine.contains(",\n");
                 boolean inPoint = decodedLine.contains(". ");
                 boolean endPoint = decodedLine.contains(".\n");
-                if (inComma || endComma || inPoint || endPoint){
-                    return tryCode;
+                if (inComma || inPoint || endComma || endPoint) {
+                    counter++;
+                    System.out.println("Співпадіння -->" + counter);
+                    if (counter >3) {
+                        System.out.println("Brute_force знайдено 4 співпадіння ключа");
+                        System.out.println("Дешифровка з ключем " + tryCode);
+                        return tryCode;
+                        }
+                    }
                 }
+
+
             }
-        }
         return 0;
     }
 }

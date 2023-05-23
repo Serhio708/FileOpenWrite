@@ -1,7 +1,7 @@
 /*
 public class SetColor набір констант для задання кольору тексту
  */
-// не працюе в консолі
+// не працюе в консолі, в IDEA все норм
 /*
 public class SetColor {
     public static final String Red ="[31m";

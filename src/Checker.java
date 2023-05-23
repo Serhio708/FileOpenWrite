@@ -9,7 +9,8 @@ public void fileExist(String FileName) чи є первинний файл?
                         mode 1 - з попередженням, для роботи з CLI
 public String makeFileName(String SourcePathName,String Suffix) формує ім'я файлу
 
-public int getCode(String line) - чи є code числом?
+public int getCode(String line) - перевіряє чи є code числом?
+                        також приводить великі значення code до розмірів abcEnglish
  */
 
 import java.io.File;
@@ -62,6 +63,7 @@ public class Checker {
     }
     public int getCode(String line){
         Menu menu = new Menu();
+
         int code=0;
         try {
             code = Integer.parseInt(line.trim());
@@ -71,6 +73,7 @@ public class Checker {
             menu.sayBye();
             System.exit(0);
         }
+        code = code % Letter.abcEnglish.length();
         if (code < 0) {
             code *= (-1);
         }
